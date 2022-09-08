@@ -1,0 +1,12 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Edit
+{% endblock %}
+
+{% block content %}
+	<h2>{{ book.title }}</h2>
+	<h3>Current rating: {{ book.rating }}</h3>
+	{{ wtf.quick_form(form) }}
+{% endblock %}
