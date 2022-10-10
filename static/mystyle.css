@@ -1,0 +1,125 @@
+body{
+    background-color: #361500;
+    color: aliceblue;
+    text-align: center;
+    font-family: Merriweather, serif;
+}
+
+.title{
+    font-family: Merriweather, serif;
+    font-weight: 900;
+    font-size: 10rem;
+    margin-top: 80px;
+}
+
+.list-group-item{
+    background-color: #361500;
+    border: 0px;
+    font-size: 4rem;
+}
+
+.list-group{
+    margin: 2%;
+}
+
+.container{
+    margin: auto;
+    padding: 0;
+    width: 100%;
+}
+
+.btn-warning{
+    background-color: #CC9544;
+    border-color: black;
+}
+
+.edit{
+    margin-left: 3%;
+    color: aliceblue;
+    font-size: 2rem;
+}
+
+@media (max-width: 768px){
+    .title{
+        margin: 20px;
+        margin-top: 40px;
+        font-size: 7rem;
+    }
+    .list-group-item{
+        font-size: 2rem;
+    }
+}
+
+.container-fluid{
+    margin-top: 60px;
+}
+
+@media (min-width: 768px) {
+    .container-fluid{
+        margin-top: 50px;
+        width: 80%;
+    }
+    .control-label{
+        font-size: 3rem;
+    }
+    .form-control{
+        height: 40px;
+    }
+}
+
+#rating{
+    text-align: center;
+    font-size: 2rem;
+}
+
+#submit{
+    margin-top: 20px;
+    background-color: #CC9544;
+    border-color: black;
+    color: white;
+    width: 130px;
+    height: 40px;
+    font-size: 2rem;
+}
+#submit:hover{
+    background-color: goldenrod;
+    border-color: goldenrod;
+}
+
+#form-edit{
+    margin-top: 0px;
+}
+
+.title-edit{
+    margin-top: 100px;
+    margin-bottom: 40px;
+    font-size: 4.5rem;
+}
+
+.current-rating{
+    margin-bottom: 30px;
+}
+
+label{
+    font-weight: 400;
+}
+
+@media (min-width: 768px) {
+    .current-rating{
+    margin-bottom: 30px;
+    font-size: 4rem;
+}
+    .title-edit{
+        font-size: 8rem;
+        font-weight: 700;
+    }
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}

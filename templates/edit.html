@@ -1,12 +1,26 @@
 {% extends 'bootstrap/base.html' %}
 {% import "bootstrap/wtf.html" as wtf %}
-
 {% block title %}
-Edit
+Edit Rating
+{% endblock %}
+{% block styles %}
+{{super()}}
+<!--		custom css-->
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='mystyle.css')}}">
+<!--		google fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,900&family=Montserrat:wght@900&display=swap"
+      rel="stylesheet">
+<link rel="icon" href="static/favicon.ico">
 {% endblock %}
 
 {% block content %}
-	<h2>{{ book.title }}</h2>
-	<h3>Current rating: {{ book.rating }}</h3>
+	<h2 class="title-edit">{{ book.title }}</h2>
+	<h3 class="current-rating">Current rating: {{ book.rating }}</h3>
+<div class="container-fluid" id="form-edit">
 	{{ wtf.quick_form(form) }}
+	</div>
+<footer><p>© Made with love by David Castro</p></footer>
 {% endblock %}

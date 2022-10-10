@@ -4,7 +4,23 @@
 {% block title %}
 Add Book
 {% endblock %}
+{% block styles %}
+{{super()}}
+<!--		custom css-->
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='mystyle.css')}}">
+<!--		google fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,900&family=Montserrat:wght@900&display=swap"
+      rel="stylesheet">
+<link rel="icon" href="static/favicon.ico">
+{% endblock %}
 
 {% block content %}
+<h1 class="title">Add a new book</h1>
+<div class="container-fluid">
 	{{ wtf.quick_form(form) }}
+	</div>
+<footer><p>© Made with love by David Castro</p></footer>
 {% endblock %}

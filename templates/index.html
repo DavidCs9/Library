@@ -1,20 +1,28 @@
 {% extends 'bootstrap/base.html' %}
 
 {% block title %} Library {% endblock %}
+{% block styles %}
+{{super()}}
+<!--		custom css-->
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='mystyle.css')}}">
+<!--		google fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,900&family=Montserrat:wght@900&display=swap"
+      rel="stylesheet">
+<link rel="icon" href="static/favicon.ico">
+{% endblock %}
 
 {% block content %}
-	<h1 class="title">My Library</h1>
-	{% if books == [] %}
-		<p>Library is empty.</p>
-	{% endif %}
-	<ul class="list-group">
-		{% for book in books %}
-			<li class="list-group-item">{{ book.title }} - {{ book.author }} - {{ book.rating }}/10.0
-			<a class="btn btn-secondary" href="{{ url_for('edit', id=book.id) }}  ">Edit</a> <a
-			class="btn btn-secondary" href="{{ url_for('delete', id=book.id) }}">Delete</a>
-</li>
-		{% endfor %}
-	</ul>
-	<a class=" btn btn-primary" href="{{ url_for('add') }}">Add New Book</a>
+<div class="container">
 
+	<h1 class="title">Bienvenido a My Library</h1>
+
+	<a href="{{ url_for('login') }}" class="btn btn-primary btn-large">Login</a>
+	<a href="{{ url_for('register') }}" class="btn btn-secondary btn-large">Register</a>
+
+</div>
+
+<footer><p>© Made with love by David Castro</p></footer>
 {% endblock %}
