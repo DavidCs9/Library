@@ -1,78 +1,91 @@
-body{
+body {
     background-color: #361500;
     color: aliceblue;
     text-align: center;
     font-family: Merriweather, serif;
 }
 
-.title{
+.nav{
+    font-size: x-large;
+    justify-content: center;
+}
+.navbar-brand:hover{
+    color: bisque;
+}
+
+.logout{
+    font-size: x-large;
+    color: ghostwhite;
+}
+
+.username{
+    font-size: medium;
+    justify-content: right;
+    color: ghostwhite;
+}
+
+.title {
     font-family: Merriweather, serif;
     font-weight: 900;
     font-size: 10rem;
     margin-top: 80px;
 }
 
-.list-group-item{
+.list-group-item {
     background-color: #361500;
     border: 0px;
     font-size: 4rem;
 }
 
-.list-group{
+.list-group {
     margin: 2%;
 }
 
-.container{
+.container {
     margin: auto;
     padding: 0;
     width: 100%;
 }
 
-.btn-warning{
+.btn-warning {
     background-color: #CC9544;
     border-color: black;
 }
 
-.edit{
+.edit {
     margin-left: 3%;
     color: aliceblue;
     font-size: 2rem;
+
 }
 
-@media (max-width: 768px){
-    .title{
-        margin: 20px;
-        margin-top: 40px;
-        font-size: 7rem;
-    }
-    .list-group-item{
-        font-size: 2rem;
-    }
-}
 
-.container-fluid{
+
+.container-fluid {
     margin-top: 60px;
 }
 
 @media (min-width: 768px) {
-    .container-fluid{
+    .container-fluid {
         margin-top: 50px;
         width: 80%;
     }
-    .control-label{
+
+    .control-label {
         font-size: 3rem;
     }
-    .form-control{
+
+    .form-control {
         height: 40px;
     }
 }
 
-#rating{
+#rating {
     text-align: center;
     font-size: 2rem;
 }
 
-#submit{
+#submit {
     margin-top: 20px;
     background-color: #CC9544;
     border-color: black;
@@ -81,45 +94,117 @@ body{
     height: 40px;
     font-size: 2rem;
 }
-#submit:hover{
+
+#submit:hover {
     background-color: goldenrod;
     border-color: goldenrod;
 }
 
-#form-edit{
+#form-edit {
     margin-top: 0px;
 }
 
-.title-edit{
+.title-edit {
     margin-top: 100px;
     margin-bottom: 40px;
     font-size: 4.5rem;
 }
 
-.current-rating{
+.current-rating {
     margin-bottom: 30px;
 }
 
-label{
+label {
     font-weight: 400;
 }
 
 @media (min-width: 768px) {
-    .current-rating{
-    margin-bottom: 30px;
-    font-size: 4rem;
-}
-    .title-edit{
+    .current-rating {
+        margin-bottom: 30px;
+        font-size: 4rem;
+    }
+
+    .title-edit {
         font-size: 8rem;
         font-weight: 700;
     }
 }
 
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: white;
-  text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+
+@media (max-width: 900px) {
+    /*index*/
+    .title {
+        margin: 20px;
+        margin-top: 0;
+        font-size: 7rem;
+    }
+
+    .list-group-item {
+        font-size: 2rem;
+    }
+
+    body {
+        margin-top: 20px;
+    }
+    .botones{
+        margin-top: 40px;
+    }
+    .btn {
+    width: 80%;
+    margin: 10px;
+    font-size: 3rem;
+    }
+    footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+    img{
+        width: 80%;
+        margin-top: 40px;
+    }
+    /*login*/
+    .form-control{
+        width: 80%;
+        margin: auto;
+        font-size: 2rem;
+        padding: 2.5rem;
+        margin-top: 20px;
+    }
+    .form{
+        margin: 70px 0;
+        margin-bottom: 30px;
+    }
+    /*usuaro*/
+    .list-group-item{
+        color: ghostwhite;
+        font-size: x-large;
+    }
+    .books{
+        font-size: xx-large;
+    }
+    .books-user{
+        color: #CC9544;
+        outline: none;
+        text-decoration: none;
+    }
+
+    .books-user:hover{
+        color: white;
+        outline: none;
+        text-decoration: none;
+    }
 }

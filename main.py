@@ -32,6 +32,7 @@ class EditForm(FlaskForm):
     rating = SelectField(label='New Rating', choices=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
                          validators=[DataRequired()])
     submit = SubmitField(label='Confirm')
+    cancel = SubmitField(label='Cancel')
 
 
 # CREATE TABLE IN DB
@@ -75,6 +76,11 @@ def usuario():
     except:
         return render_template('usuario.html', user=current_user)
 
+@login_required
+@app.route('/book')
+def book():
+    book = Book.query.filter_by(book_id=id)
+    return render_template('book.html', book=book, user=current_user)
 
 @login_required
 @app.route("/add", methods=["GET", "POST"])
