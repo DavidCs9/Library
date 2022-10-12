@@ -10,7 +10,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 # create app
 app = Flask(__name__)
 application = app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:Dcastrosi99@localhost:3306/library"
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://admin:Dc080699@database-1.ceydzb6oymzg.us-west-1.rds.amazonaws.com:3306/library"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 app.secret_key = 'asghdhjkgashjdgahjksgd'
