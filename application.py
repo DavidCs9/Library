@@ -12,7 +12,7 @@ import os
 app = Flask(__name__)
 application = app = Flask(__name__)
 # app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('URL')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://admin:kyUvXPpGj3xg0ssBXN02@library-db.cfntbfmybblf.us-west-1.rds.amazonaws.com:3306/librarydb'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://admin:kyUvXPpGj3xg0ssBXN02@library-db.cfntbfmybblf.us-west-1.rds.amazonaws.com:3306/librarydb'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
